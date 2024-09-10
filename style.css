@@ -1,0 +1,213 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+/* top-header start */
+.top_header{
+    background-color: black;
+    padding: 10px;
+  
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.text-decoration-none{
+    text-decoration: none;
+    color: white;
+    border-right: 1px solid white;
+    
+   
+}
+.fa-phone{
+    color: white !important;
+    
+}
+.fa-location-dot{
+    color: white;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.text-white{
+    color: white;
+}
+.fa-envelope{
+    color: white;
+}
+.fa-brands{
+    color: white;
+}
+/* .top_header end */
+
+
+/* navbar start */
+.nav{
+    background-color: whitesmoke;
+    padding: 10px;
+   
+   
+}
+.logo{
+    width: 150px;
+}
+ul {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+li{
+    list-style: none;
+}
+li:hover{
+    background-color: red;
+}
+/* nav end */
+/* hero-section start */
+
+
+.home-hero {
+    padding: 20px;
+    background-image: url('./home-hero.webp');
+    background-size: cover;
+    background-position: center;
+    /* Adjust height as needed */
+}
+.fa-star{
+   background-color: red;
+}
+button a{
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 600;
+    background-color: #D50400;
+    color: white;
+    margin-top: 10px;
+
+    border-bottom-right-radius: 12px;
+}
+.size{
+    font-size: 40px;
+    font-weight: 900;
+}
+.text{
+    padding: 10px;
+    margin-top: 30px;
+   line-height: 30px;
+}
+/* hero-form */
+.red{
+    color: #D50400;
+    font-weight: 800;
+}
+.hero-form{
+   
+    margin-top: 50px;
+    background-color: antiquewhite;
+   padding: 30px;
+   max-width: 30rem;
+    border-radius: 6px 6px 32px 6px ;
+    text-align: center;
+    line-height: 30px;
+}
+.hero-form input{
+    width: 300px;
+    margin-top: 20px;
+    padding: 5px;
+    border-bottom-right-radius: 12px;
+    border-color: #D50400;
+}
+.textarea{
+    border-color: #D50400;
+    margin-top: 10px;
+}
+.btn a{
+  padding-right: 50px;
+    padding-left: 50px;
+}
+.marq{
+    background-color: #D50400;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+/* section-three start */
+.nav-tabs .nav-link{
+    border-color: #D50400;
+  }
+
+.nav-items .nav-link{
+    color: #D50400;
+    
+    font-weight: 700;
+}
+/* section-three end */
+
+/* section image-book */
+.book_tab_row img{
+    width: 100%;
+}
+/* section image-book end */
+
+
+/* banner-section start */
+.banner-section{
+    background-image: url('./services-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+}
+.fon{
+    font-weight: 900;
+}
+.btn_light{
+    padding: 5px;
+    border-bottom-right-radius: 12px;
+
+}
+.anchore{
+    padding: 5px;
+    background: transparent;
+    color: white;
+    border-bottom-right-radius: 12px;
+}
+.btn_light:hover{
+    background-color: #D50400;
+    color: white;
+}
+.anchore:hover{
+background-color: #D50400;
+color: white;
+}
+/* banner-section end */
+
+/* section-four start */
+.f_book{
+    max-width: 100%;
+}
+.four_book h6{
+font-weight: 600;
+}
+/* section-four end */
+
+
+/* five-section start */
+.five_book img{
+max-width: 100%;
+}
+.five_book h6{
+    font-weight: 600;
+}
+/* five section end */
+
+
+/* footer start */
+
+
