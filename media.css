@@ -1,5 +1,29 @@
-@media only screen and (max-width: 768px) {
-   nav{
-    width: 100%;
-   }
-  }
+
+
+
+@media only screen  and (max-width:768px){
+    
+
+.navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content.flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+}
+
