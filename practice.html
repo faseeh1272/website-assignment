@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+        integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="media.css">
+    <style>
+        *,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #032855;
+
+        }
+
+        .header {
+            /* background-color: #032855; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 10px 0px;
+        }
+
+        .logo img {
+            width: 300px;
+        }
+
+        ul.menu {
+            display: flex;
+            padding: 0;
+            list-style: none;
+            gap: 20px;
+        }
+
+        ul.menu a {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .btn-primary {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            background-color: #e55123;
+            color: #fff;
+            border-radius: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section.hero-section {
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            padding-bottom: 110px;
+            background-image: url('https://www.biopharmainfo.net/assets/img/home1-banner.jpg');
+            position: relative;
+        }
+
+        section.hero-section:before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: #0c263cbd;
+        }
+
+        .header-content {
+            position: relative;
+            padding: 40px 0px;
+        }
+
+        .flex_left_right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left_side {
+            width: 48%;
+        }
+
+        .right_side {
+            width: 48%;
+        }
+
+        h1.banner_heading {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        p.banner_para {
+            color: #fff;
+            font-size: 21px;
+            padding: 20px 0px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .bio-btn {
+            background-color: #032855;
+            color: white;
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 20px;
+            /* margin-top: 50px; */
+        }
+
+        .fa-chevron-right {
+            position: relative;
+            right: 0;
+            padding: 10px 12px;
+            background-color: #948383;
+            border-radius: 50%;
+            text-align: center;
+            object-fit: cover;
+        }
+
+        .fas {
+            background-color: #b9a5a5;
+        }
+
+
+
+        /* first-section-start */
+        .first-section-h {
+            color: #032855;
+            font-weight: 800;
+        }
+
+        .melt {
+            color: #e55123;
+        }
+
+        .first-section .btn-3 {
+            background-color: #032855;
+            padding: 8px 10px;
+            color: white;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+
+        .col-lg-6 img {
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        /* first section end */
+
+        /* section-title start */
+        .section-title {
+            text-align: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-bottom: 80px;
+
+        }
+
+        .section-title h1 {
+            color: #032855;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+
+        .section-2 {
+            width: 100%;
+            background-image: url(././biofarma/an-bg02.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #032855;
+            margin-top: 150px;
+
+        }
+
+        .service-h {
+            color: #032855;
+        }
+
+        /* section-location start */
+
+        .location-img img {
+            border-radius: 15px;
+        }
+
+        .location-card {
+            /* border-right: 1px solid black;
+            border-bottom: 1px solid black; */
+            border-radius: 12px;
+            background-color: rgb(243, 243, 185);
+        }
+
+        .location-btn a {
+            background-color: #032855;
+            padding: 10px 25px;
+            color: white;
+            font-weight: 700;
+            border-radius: 20px;
+
+        }
+
+        /* section six */
+        .six-car {
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .sponsor-box {
+    background: no-repeat #e55123;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    /* height: 200px; */
+
+        }
+.sponsor-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; .sponsor-box {
+    background: no-repeat #e55123;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    /* height: 200px;  */
+}
+
+.sponsor-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+}
+.sponsor-box:hover{
+    background-color: #032855;
+}
+.footer-section{
+    padding: 20px;
+    background-color: #032855;
+    color: white;
+}
+.footer-icons a{
+    padding: 10px;
+    border-radius: 35px;
+margin: 5px;
+color: #032855;
+
+}
+
+
+    </style>
+</head>
+
+<body>
+    <section class="hero-section">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <img src="https://www.biopharmainfo.net/assets/img/logo/logo.png" alt="">
+                    </div>
+                    <ul class="menu">
+                        <li>
+                            <a href="javascript:void(0);">
+                                Capabilites
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Active Trails
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Research Sites
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Connect and Learn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Careers
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="javscript:void(0);" class="btn btn-primary">Find a Clinical Trail &nbsp; &nbsp; <i
+                            class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="header-content">
+            <div class="container">
+                <div class="flex_left_right">
+                    <div class="left_side">
+                        <h1 class="banner_heading">
+                            Medicine Through Clinical Research
+                        </h1>
+                        <p class="banner_para">
+                            We are a clinical research investigator network with expertise in conducting clinical trials
+                            in multiple therapeutic areas with efficiency, integrity, and diligence to serve our purpose
+                            of advancing medicine through clinical research
+                        </p>
+                        <a class="bio-btn" href="https://www.biopharmainfo.net/">
+                            Why Choose Biofarma &nbsp; &nbsp;<i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="right_side">
+                        <img src="https://www.biopharmainfo.net/assets/img/bg/ss.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="first-section m-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mt-5">
+                    <div class="f-img ">
+                        <img src="./biofarma/intoduction_image.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="first-section-h">An Introduction to</h1>
+                    <h1 class="first-section-h"><span class="melt">Biopharma</span> Informatic</h1>
+                    <p>Biopharma Informatic is an Investigator Network with our corporate office located in Houston,TX
+                    </p>
+
+                    <p>We are the link connecting pharmaceutical companies (sponsors) and Contract Research
+                        Organizations
+                        <br>
+                        (CRO’s) to Investigative sites with caring individuals seeking to contribute in the advancement
+                        of
+                        <br>
+                        medicine. Our expertise is in providing a turn key operation for physician offices from the very
+                        initial stages of clinical trial business development through the close out of a study.
+                        <br>
+                        <br>
+                        Learn how we serve industry leading services with technology to create a finer clinical
+                        experience. Reach us today to find out more.
+
+                    </p>
+                    <br>
+
+                    <a class="btn-3" href="https://www.biopharmainfo.net/">
+                        Read more &nbsp; &nbsp; <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-2 ">
+        <div class="container">
+            <div class="row justify-content-center  ">
+                <div class="col-xl-8  col-lg-8 justify-content-center ">
+                    <div class="section-title justify-content-center text-center pl-40 pr-40 mb-80">
+                        <h1>WHAT SETS US APART</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-4">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-4">
+                    <div class="servis-icons">
+                        <img style="width: 50px;" src="./biofarma/shield-check.svg" alt="">
+                    </div>
+                    <div class="service-content mt-5">
+                        <h4 class="service-h">Secured Centralized System</h4>
+                        <p>Our secured system will keep your data <br> protected in our database, keeping it private
+                            <br> and confidential at all times.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="servis-icons">
+                        <img style="width: 50px;" src="./biofarma/comment-alt.svg" alt="">
+                    </div>
+                    <div class="service-content mt-5">
+                        <h4 class="service-h">Effective Communication Tools</h4>
+                        <p>Our two-way communication integration <br> removes the communication barrier and <br>
+                            seamlessly offers regular updates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="servis-icons">
+                        <img style="width: 50px;" src="./biofarma/headphones.svg" alt="">
+                    </div>
+                    <div class="service-content mt-5">
+                        <h4 class="service-h">Dedicated requirter</h4>
+                        <p>As per the clinical trial of your choice, a <br> recruiter will be dedicated to you who
+                            <br>specializes in the study you have chosen to <br> guide you accordingly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-5 m-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-4">
+                    <div class="servis-icons">
+                        <img style="width: 50px;" src="./biofarma/capsules.svg" alt="">
+                    </div>
+                    <div class="service-content mt-5">
+                        <h4 class="service-h">Active Trails</h4>
+                        <p>With over 50 PIs specializing in various <br> fields, we have the capacity to conduct <br>
+                            clinical research across a wide range of <br> indications. Please visit our Active Trials
+                            <br> page to find a trial that may fit your needs.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="servis-icons">
+                        <img style="width: 50px;" src="./biofarma/user-gear.svg" alt="">
+                    </div>
+                    <div class="service-content mt-5">
+                        <h4 class="service-h">Capabilites</h4>
+                        <p>Our unique one window operation allows us <br> to streamline the start up process and <br>
+                            successfully complete all requirements in a <br>timely fashion from startup to close out.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="servis-icons">
+                        <img style="width: 50px;" src="./biofarma/microscope.svg" alt="">
+                    </div>
+                    <div class="service-content mt-5">
+                        <h4 class="service-h">Clinical Research</h4>
+                        <p>The PIs within our group, along with each of <br> our team members, work in sync to provide
+                            <br>superior support and service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-location">
+        <h1 class="service-h fw-bold   text-center justify-content-center mt-5 mb-5">Locations</h1>
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-4">
+                    <div class="location-card">
+                        <div class="location-img">
+                            <img src="./biofarma/(16)16605 Southwest Freeway Ste. 550, Sugar Land, TX 77479.webp"
+                                alt="">
+                        </div>
+                        <div class="location-text m-3">
+                            <div class="text-icon d-flex justify-content-between  service-h">
+                                <div class="txt">
+                                    <p class="service-h">Sugar Land </p>
+                                </div>
+                                <div class="l-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold service-h">texas pain consultants</p>
+                            <p class="service-h"><i class="fa-solid fa-location-dot"></i>&nbsp; 16605 Southwest free
+                                way, ste, 550 <br>TX77479</p>
+                            <p class="service-h"><i class="fa-solid fa-envelope"></i> &nbsp;info@biopharmainfo.net</p>
+                            <p class="service-h"><i class="fa-solid fa-phone"></i> &nbsp; (281)944-3610</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="location-card">
+                        <div class="location-img">
+                            <img src="./biofarma/(17)17510 W Grand Parkway S Ste. 220, Sugar Land, TX 77479.webp"
+                                alt="">
+                        </div>
+                        <div class="location-text m-3">
+                            <div class="text-icon d-flex justify-content-between   service-h">
+                                <div class="txt">
+                                    <p class="service-h">Sugar Land </p>
+                                </div>
+                                <div class="l-icon">
+                                    <i class="fa-solid fa-location-dot mr-5"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold service-h">Gastroenterology Accociates</p>
+                            <p class="service-h"><i class="fa-solid fa-location-dot"></i>&nbsp; 16605 Southwest free
+                                way, ste, 550 <br>TX77479</p>
+                            <p class="service-h"><i class="fa-solid fa-envelope"></i> &nbsp;info@biopharmainfo.net</p>
+                            <p class="service-h"><i class="fa-solid fa-phone"></i> &nbsp; (281)944-3610</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="location-card">
+                        <div class="location-img">
+                            <img src="./biofarma/HRAS Building - Copy.webp" alt="">
+                        </div>
+                        <div class="location-text m-3">
+                            <div class="text-icon d-flex justify-content-between  service-h">
+                                <div class="txt">
+                                    <p class="service-h">Sugar Land </p>
+                                </div>
+                                <div class="l-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold service-h">HRAS Houston Rheumatlogy</p>
+                            <p class="service-h"><i class="fa-solid fa-location-dot"></i>&nbsp; 16605 Southwest free
+                                way, ste, 550 <br>TX77479</p>
+                            <p class="service-h"><i class="fa-solid fa-envelope"></i> &nbsp;info@biopharmainfo.net</p>
+                            <p class="service-h"><i class="fa-solid fa-phone"></i> &nbsp; (281)944-3610</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <section class="location mt-5">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-4">
+                    <div class="location-card">
+                        <div class="location-img">
+                            <img src="./biofarma/Clear Brook Medical Associates.webp" alt="">
+                        </div>
+                        <div class="location-text m-3">
+                            <div class="text-icon d-flex justify-content-between  service-h">
+                                <div class="txt">
+                                    <p class="service-h">Sugar Land </p>
+                                </div>
+                                <div class="l-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold service-h">Clear Brook Medical Associates</p>
+                            <p class="service-h"><i class="fa-solid fa-location-dot"></i>&nbsp; 16605 Southwest free
+                                way, ste, 550 <br>TX77479</p>
+                            <p class="service-h"><i class="fa-solid fa-envelope"></i> &nbsp;info@biopharmainfo.net</p>
+                            <p class="service-h"><i class="fa-solid fa-phone"></i> &nbsp; (281)944-3610</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="location-card">
+                        <div class="location-img">
+                            <img src="./biofarma/Midway Pediatrics - Alabama.webp" alt="">
+                        </div>
+                        <div class="location-text m-3">
+                            <div class="text-icon d-flex justify-content-between   service-h">
+                                <div class="txt">
+                                    <p class="service-h">Sugar Land </p>
+                                </div>
+                                <div class="l-icon">
+                                    <i class="fa-solid fa-location-dot mr-5"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold service-h">Alabama Midway Medical</p>
+                            <p class="service-h"><i class="fa-solid fa-location-dot"></i>&nbsp; 16605 Southwest free
+                                way, ste, 550 <br>TX77479</p>
+                            <p class="service-h"><i class="fa-solid fa-envelope"></i> &nbsp;info@biopharmainfo.net</p>
+                            <p class="service-h"><i class="fa-solid fa-phone"></i> &nbsp; (281)944-3610</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="location-card">
+                        <div class="location-img">
+                            <img src="./biofarma/(18)19255-Park-Row-Houston-TX-19255-Park-Row-1-LargeHighDefinition.webp"
+                                alt="">
+                        </div>
+                        <div class="location-text m-3">
+                            <div class="text-icon d-flex justify-content-between  service-h">
+                                <div class="txt">
+                                    <p class="service-h">Sugar Land </p>
+                                </div>
+                                <div class="l-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold service-h">Biofarma Informatic- west Housto</p>
+                            <p class="service-h"><i class="fa-solid fa-location-dot"></i>&nbsp; 16605 Southwest free
+                                way, ste, 550 <br>TX77479</p>
+                            <p class="service-h"><i class="fa-solid fa-envelope"></i> &nbsp;info@biopharmainfo.net</p>
+                            <p class="service-h"><i class="fa-solid fa-phone"></i> &nbsp; (281)944-3610</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <div class="location-btn mt-5 text-center">
+            <a class="btn-3" href="https://www.biopharmainfo.net/">
+                View All Locations</a>
+        </div>
+    </section>
+    <section class="six mt-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-3">
+                    <div class="six-car m-5">
+                        <img class="m-3" src="./biofarma/experience.png" alt="">
+                        <h1 class="service-h fw-bold">13+</h1>
+                        <h5 class="service-h">13+ years of proven <br> Exepertise</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="six-car m-5">
+                        <img class="m-3" src="./biofarma/leadership.png" alt="">
+                        <h1 class="service-h fw-bold">100+</h1>
+                        <h5 class="service-h">13+ years of proven <br> Exepertise</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="six-car m-5">
+                        <img class="m-3" src="./biofarma/hiring.png" alt="">
+                        <h1 class="service-h fw-bold">16+</h1>
+                        <h5 class="service-h">13+ years of proven <br> Exepertise</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="six-car m-5">
+                        <img class="m-3" src="./biofarma/hospital.png" alt="">
+                        <h1 class="service-h fw-bold">30+</h1>
+                        <h5 class="service-h">13+ years of proven <br> Exepertise</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="seven m-5">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-8">
+                   <h5 class="service-h">Over Latest Blog</h5>
+                    <h1 class="service-h fw-bold">Stay Updated To Our Blog & News</h1>
+                    <p>Keep abreast of the freshest content from our blog and news. Explore engaging articles, updates, and noteworthy announcements tailored for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="guide m-5">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-4">
+                    <div class="location-card">
+                        <div class="location-img">
+                            <img src="./biofarma/blog1.jpg"
+                                alt="">
+                        </div>
+                        <h5 class="service-h">A Guide on How to Get Paid with <br> Clinical Trials?</h5>
+                       <p class="service-h">
+                        All the prescription drugs we use today <br> undergo thorough extensive testing in <br> many individuals during clinical trials. <br> Your decision to join one of these trials <br> is a personal one...
+                       </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="location-card">
+                            <div class="location-img">
+                                <img src="./biofarma/blog2.jpg"
+                                    alt="">
+                            </div>
+                            <h5 class="service-h">Effective Strategies For Enhancing <br> Houston Clinical Trial’s <br> Recruitment</h5>
+                           <p class="service">
+                            Each year, dozens of research projects <br> and clinical trials are carried out all over <br> the world with the common objective of <br> introducing new medical products...
+                           </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="location-card">
+                                <div class="location-img">
+                                    <img src="./biofarma/blog3.avif"
+                                        alt="">
+                                </div>
+                                <h5 class="mt-5 service-h">Understanding Clinical Trials And <br> Its Benefits</h5>
+                               <p class="service-h">
+                                Clinical trials give many people optimism while also <br> offering researchers the chance to discover therapies <br> that may one day help patients. People who are <br> unwell...
+                               </p>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="location-btn mt-5 text-center">
+            <a class="btn-3" href="https://www.biopharmainfo.net/">
+                View All Blogs</a>
+    </section>
+    <section class="eight text-center justify-content-center mt-5">
+        <h1 class="service-h">Proudly collaborating with Sponsors</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+                    <div class="sponsor-box">
+                        <img class="one img-fluid" src="./biofarma/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+                    <div class="sponsor-box">
+                        <img class="one img-fluid" src="./biofarma/2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+                    <div class="sponsor-box">
+                        <img class="one img-fluid" src="./biofarma/10.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+                    <div class="sponsor-box">
+                        <img class="one img-fluid" src="./biofarma/11.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-bg-img">
+        <img src="./biofarma/footer-bg1.png" alt="">
+    </div>
+    <section class="footer-section">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+<div class="footer-logo">
+    <img src="./biofarma/logo.png" style="background-color: #032855;" alt="">
+</div>
+<br>
+    <div class="footer-icons ">
+        <a class="bg-light" target="_blank" href="#"><i class="fa-brands fa-facebook"></i></a>&nbsp;<a class="bg-light"target="_blank" href="#"><i class="fa-brands fa-tiktok"></i></a>&nbsp;<a class="bg-light" target="_blank" href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp;<a class="bg-light" target="_blank" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+
+        </div>
+        <div class="col-lg-3">
+            <h2>Over link</h2>
+            <p>>&nbsp; home</p>
+            <p>>&nbsp; About us</p>
+            <p>>&nbsp;  Active Trials</p>
+            <p>>&nbsp; Our Team</p>
+                <p>>&nbsp; Our Blogs</p>
+                <P>>&nbsp; PRIVACY POLICY</P>
+        </div>
+        <div class="col-lg-3">
+            <h2>Other links</h2>
+            <P>> &nbsp; Connect & Learn</P>
+            <P>>&nbsp; Our Partners</P>
+            <P>> &nbsp; Locations</P>
+            <P>> &nbsp; Careers</P>
+            <P>> &nbsp; Contact Us</P>
+            <P>> &nbsp;  Terms & Conditions</P>
+        </div>
+        <div class="col-lg-3">
+            <H2>Contact US</H2>
+            <P><i class="fa-solid fa-phone-flip"></i> &nbsp; 
+                (281) 944-3610</P>
+                <P><i class="fa-solid fa-envelope"></i> &nbsp; 
+                    info@biopharmainfo.net</P>
+                    <P><i class="fa-solid fa-location-dot"></i> &nbsp; 19255 PARK ROW #205
+                        HOUSTON,<br>&nbsp; &nbsp; &nbsp; TX 77084</P>
+        </div>
+
+    </div>
+</div>
+<hr class="line">
+<div class="footer-content text-center">© Copyright 2024 Biopharma Informatic LLC. All Rights Reserved.</div>
+    </section>
+    
+    <!-- <section class="eight text-center justify-content-center mt-5">
+
+        <h1 class="service-h">Proudly collaborating with Sponsors</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img class="one" src="./biofarma/1.png" style=" background:no-repeat #e55123; border-radius: 10px; padding: 40px 20px; margin: 20px 0px; " alt="">
+                </div>
+                <div class="col-lg-3">
+                    <img class="one" src="./biofarma/2.png" style=" background:no-repeat #e55123; border-radius: 10px; padding: 40px 20px; margin: 20px 0px; " alt="">
+                </div>
+                <div class="col-lg-3">
+                    <img class="one" src="./biofarma/10.png" style=" background:no-repeat #e55123; border-radius: 10px; padding: 40px 20px; margin: 20px 0px; " alt="">
+                </div>
+                <div class="col-lg-3">
+                    <img class="one" src="./biofarma/11.png" style=" background:no-repeat #e55123; border-radius: 10px; padding: 40px 20px; margin: 20px 0px; " alt="">
+                </div>
+            </div>
+        </div>
+    </section> -->
+</body>
+</html>

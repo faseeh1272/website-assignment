@@ -17,6 +17,12 @@ ul {
     justify-content: center;
     align-items: center;
 }
+.logo img{
+   
+}
+.btn-primary{
+    display: none;
+}
 
 .content.flex {
     flex-direction: column;
